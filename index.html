@@ -6,17 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     <title>Pagina con github page</title>
   </head>
+
   <body>
-    <h1 class="text-center mt-5 display-4 text-primary">Hello, world!</h1>
+
+    <h1 class="text-center my-5 display-4 text-primary">Pruebas de boostrap 4.1</h1>
+
+    <div class="container my-3">
+      <div class="row">
+
+        <div class="col-md-4 col-12">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, rem, quidem itaque ad debitis similique aliquid omnis dolorum fugit id aperiam explicabo voluptatem quod harum. Labore ipsum cumque facere sunt.
+        </div>
+
+        <div class="col-md-8 col-12">
+          <ul class="list-unstyled">
+              <li class="media">
+                <img class="mr-3" src="img/logo1.jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+              <li class="media my-4">
+                <img class="mr-3" src="img/logo1.jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+              <li class="media">
+                <img class="mr-3" src="img/logo1.jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0 mb-1">List-based media object</h5>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="container my-3">
+
+      <div class="row">
+        <div class="col-md-12">
+            <img src="img/bakery-16.jpg" class="img-fluid rounded mx-auto d-block" >
+        </div>
+      </div>
+      
+      <div class="row mt-3">
+        <div class="col-md-4 order-2">
+          <img src="img/bakery-16.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col-md-4 order-3">
+          <img src="img/bakery-16.jpg" class="img-thumbnail">
+        </div>
+        <div class="col-md-4 order-1">
+          <figure class="figure">
+            <img src="img/bakery-16.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            <figcaption class="figure-caption">A caption for the above image.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="row mt3">
+        <div class="col-md-6 offset-md-3">
+            <a href="#" data-toggle="modal" data-target="#exampleModal">
+              <img src="img/bakery-16.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+            </a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <img src="img/bakery-16.jpg" class="img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container my-3">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum totam vero ipsam fuga quod quibusdam. Nemo debitis sed incidunt quia! Quae facilis optio sed, nostrum fugiat odit totam repudiandae similique.
+
+            <div id="myAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+              <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
