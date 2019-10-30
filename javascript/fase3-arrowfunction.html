@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="saludo"></h1>
+    <h2 id="suma">Resultado de la suma es: </h2>
+
+    <script>
+
+        //funciones flecha
+        var saludo = document.getElementById("saludo");
+
+        /* function saludar(nombre){
+            return "hola "+nombre;
+        } */
+
+        var saludar = nombre => 'hola '+nombre;
+        saludo.innerHTML = saludar('aries');
+
+        var sumaId = document.getElementById('suma');
+        var suma = (num1,num2) => num1 + num2;
+        sumaId.innerHTML += suma(3,6);
+
+
+
+    </script>
+    
+</body>
+</html>
