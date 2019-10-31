@@ -29,3 +29,4 @@ var arrayObjetos = [
 for( let i of arrayObjetos){
     console.log(i);
 }
+

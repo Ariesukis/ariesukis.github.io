@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Fetch desde API publica</title>
+  </head>
+  <body>
+
+    <div class="container my-5 text-center">
+
+            <h1>Personas Randoms</h1>
+
+            <button class="btn btn-success w-60 mt-3" id="boton">Obtener</button>
+
+            <div class="mt-5" id="contenido">
+
+                
+
+            </div>
+
+        </div>
+
+   
+    <script>
+        
+        //Fetch
+        var contenido = document.querySelector('#contenido');
+
+        var boton = document.getElementById('boton');   
+
+        boton.addEventListener('click', function(){
+            fetch('https://randomuser.me/api/')
+            .then(data => data.json())
+            .then(data => {
+                contenido.innerHTML = `
+                    <img src="${data.results[0].picture.medium}" id="imgPersona" width="100px" class="img-fluid rounded-circle my-3" alt="">
+                    <p>${data.results[0].name.first} ${data.results[0].name.last} </p>
+                    <p>${data.results[0].email}</p>
+                    
+                `;
+                
+            })
+
+            
+        })
+
+
+
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Fetch desde JSON</title>
+  </head>
+  <body>
+
+    <div class="container my-5 text-center">
+
+      <h1>Tabla con JSON</h1>
+
+      <button class="btn btn-success w-60 mt-3" id="boton">Obtener</button>
+
+      <div class="mt-5">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Email</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody id="contenido">
+             
+            </tbody>
+          </table>
+
+      </div>
+
+    </div>
+
+
+    <script>
+
+      //Fetch
+      var contenido = document.querySelector('#contenido');
+
+      var boton = document.getElementById('boton');   
+
+      boton.addEventListener('click', function(){
+          fetch( 'tabla.json')
+          .then(data => data.json())
+          .then(data => {
+          
+            tabla(data);
+
+          })
+      })
+
+      var tabla = (data) => {
+
+        contenido.innerHTML = " ";
+
+        for(let res of data){
+          contenido.innerHTML += `
+            <tr>
+              <th scope="row">${res.id}</th>
+              <td>${res.nombre}</td>
+              <td>${res.email}</td>
+              <td>${res.estado ? "activo" : "eliminado"}</td>
+            </tr>
+          `;
+        }
+
+      }
+
+    </script>
+
+  </body>
+</html>
