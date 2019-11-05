@@ -3,11 +3,11 @@
 $user = $_POST['InputUser'];
 $password = $_POST['InputPassword'];
 
-if($user === ' ' || $password === ' ')
+if($user === '' || $password === ' ')
 {
-    echo json_encode('Llena todos los campos');
+    echo json_encode('error');
 }else{
-    echo json_encode('<p>Usuario: '+$user+'</p><p> Contraseña: '+$password+'</p>');
+    echo json_encode('Usuario: '.$user.'<br>Contraseña: '.$password);
 }
 
 
