@@ -8,16 +8,14 @@ formulario.addEventListener('submit', function(e){
     
     var data = new FormData(formulario);
 
-    console.log(data.get('InputUser'));
-
-    fetch('http://127.0.0.1:5500/javascript/fase6-fetch-api-post/post.php',{
+    fetch('post.php',{
         method: 'POST',
         body: data  
     })
     .then( res => res.json())
     .then( datos => {
-        console.log(datos);
-        if(data === 'error'){
+        //console.log(data);
+        if(datos == 'error'){
             respuesta.innerHTML = `
             <div class="alert alert-danger" role="alert">
                 Llena todos los campos
@@ -26,7 +24,8 @@ formulario.addEventListener('submit', function(e){
         }else{
             respuesta.innerHTML = `
             <div class="alert alert-primary" role="alert">
-                ${data}
+                <p> Usuario: ${data.get('InputUser')} </p>
+                <p> Contraseña: ${data.get('InputPassword')} </p>
             </div>
             `
         }
